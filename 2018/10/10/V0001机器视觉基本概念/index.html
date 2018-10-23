@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Vision," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1、机器视觉的概念“机器视觉”，即采用机器代替人眼来做测量和判断。机器视觉系统是指通过机器视觉产品（即图像摄取装置，分CMOS和CCD两种）把图像抓取到，然后将该图像传送至处理单元，通过数字化处理，根据像素分布和亮度、颜色等信息，来进行尺寸、形状、颜色等的判别。进而根据判别的结果来控制现场的设备动作。">
+<meta name="keywords" content="Vision">
+<meta property="og:type" content="article">
+<meta property="og:title" content="V0001机器视觉基本概念">
+<meta property="og:url" content="http://zhifeiliu.com/2018/10/10/V0001机器视觉基本概念/index.html">
+<meta property="og:site_name" content="am{zhifei}">
+<meta property="og:description" content="1、机器视觉的概念“机器视觉”，即采用机器代替人眼来做测量和判断。机器视觉系统是指通过机器视觉产品（即图像摄取装置，分CMOS和CCD两种）把图像抓取到，然后将该图像传送至处理单元，通过数字化处理，根据像素分布和亮度、颜色等信息，来进行尺寸、形状、颜色等的判别。进而根据判别的结果来控制现场的设备动作。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-16T07:23:34.624Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="V0001机器视觉基本概念">
+<meta name="twitter:description" content="1、机器视觉的概念“机器视觉”，即采用机器代替人眼来做测量和判断。机器视觉系统是指通过机器视觉产品（即图像摄取装置，分CMOS和CCD两种）把图像抓取到，然后将该图像传送至处理单元，通过数字化处理，根据像素分布和亮度、颜色等信息，来进行尺寸、形状、颜色等的判别。进而根据判别的结果来控制现场的设备动作。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zhifeiliu.com/2018/10/10/V0001机器视觉基本概念/"/>
+
+
+
+
+
+  <title>V0001机器视觉基本概念 | am{zhifei}</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">am{zhifei}</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">LearningInPractice</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-motion">
+          <a href="/Motion/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-motion"></i> <br />
+            
+            Motion
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vision">
+          <a href="/Vision/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-vision"></i> <br />
+            
+            Vision
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-daq">
+          <a href="/DAQ/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-DAQ"></i> <br />
+            
+            DAQ
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mas">
+          <a href="/MAC/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-MAS"></i> <br />
+            
+            MAS
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-pac">
+          <a href="/PAC/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-PAC"></i> <br />
+            
+            PAC
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-stategrid">
+          <a href="/StateGrid/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-stateGrid"></i> <br />
+            
+            StateGrid
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/Life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life"></i> <br />
+            
+            Life
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-procuct">
+          <a href="/Product/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-product"></i> <br />
+            
+            Procuct
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-Vision" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhifeiliu.com/2018/10/10/V0001机器视觉基本概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhifei.Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="am{zhifei}">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">V0001机器视觉基本概念</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-10T08:00:00+08:00">
+                2018-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vision/" itemprop="url" rel="index">
+                    <span itemprop="name">Vision</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1、机器视觉的概念"><a href="#1、机器视觉的概念" class="headerlink" title="1、机器视觉的概念"></a>1、机器视觉的概念</h2><p>“机器视觉”，即采用机器代替人眼来做测量和判断。机器视觉系统是指通过机器视觉产品（即图像摄取装置，分CMOS和CCD两种）把图像抓取到，然后将该图像传送至处理单元，通过数字化处理，根据像素分布和亮度、颜色等信息，来进行尺寸、形状、颜色等的判别。进而根据判别的结果来控制现场的设备动作。</p>
+ <a id="more"></a>
+<h2 id="2、机器视觉系统中一定需要光源吗？"><a href="#2、机器视觉系统中一定需要光源吗？" class="headerlink" title="2、机器视觉系统中一定需要光源吗？"></a>2、机器视觉系统中一定需要光源吗？</h2><p>​       均匀良好的光源，可以保证采集到的图像具有较好的一致性，使视觉检测系统能够稳定可靠，保持较好的可重复性。</p>
+<h2 id="3、怎样选择相机？"><a href="#3、怎样选择相机？" class="headerlink" title="3、怎样选择相机？"></a>3、怎样选择相机？</h2><p>第一，需要注意相机的通讯接口，不同的输出接口有不同的输出带宽，从而影响帧率。</p>
+<p>第二，需要选择合适的分辨率。通常系统的像素精度等于视场（长或宽）除以相机分辨率（长或宽）。如视场为10mm×7.5mm，使用130万像素的相机，则相机分辨率为1280×960Pixel，则像素精度为10mm÷1280Pixel=0.0078mm/Pixel；</p>
+<p>第三，要注意传感器的尺寸与类型。</p>
+<p>第四，相机的帧率。当对检测速度有要求时，需要考虑图像采集的时间，这时候涉及相机帧率。</p>
+<p>第五，相机的尺寸大小、颜色、安装方式等。</p>
+<h2 id="4、怎样选择镜头？"><a href="#4、怎样选择镜头？" class="headerlink" title="4、怎样选择镜头？"></a>4、怎样选择镜头？</h2><p>镜头的选择，主要参数为焦距（单位mm），需要根据相机CCD的尺寸，以及所需要的工作距离和检测视野来定。一般情况，先确定系统的分辨率，结合CCD的尺寸，就能知道放大倍率，再结合工作距离和检测视野的要求，就能估算相机镜头的焦距。</p>
+<p>另外，镜头的选择还需注意镜头的物理接口是否与相机匹配。常见的接口有C口和CS口。</p>
+<h2 id="5、怎样选择光源？"><a href="#5、怎样选择光源？" class="headerlink" title="5、怎样选择光源？"></a>5、怎样选择光源？</h2><p>光源的选择，原则是要将需要检测的目标与背景尽量区分开来。确定一种合适的光源，往往需要做多种光源、多种角度尝试。通过选择合适的光源照明，目的是要获得以下图像效果：1）对比度明显，目标与背景的边界清晰；2）背景尽量淡化而且均匀，不干扰图像处理；3）与颜色有关的还需要颜色真实、亮度适中，不过度曝光。</p>
+<h2 id="6、什么是像素？"><a href="#6、什么是像素？" class="headerlink" title="6、什么是像素？"></a>6、什么是像素？</h2><p>感光器件上的基本感光单元，也是一幅图像的基本单元。</p>
+<h2 id="7、什么是分辨率？"><a href="#7、什么是分辨率？" class="headerlink" title="7、什么是分辨率？"></a>7、什么是分辨率？</h2><p>感光器件/图像的水平和垂直方向的像素数，如1024×768。</p>
+<h2 id="8、什么是视野？"><a href="#8、什么是视野？" class="headerlink" title="8、什么是视野？"></a>8、什么是视野？</h2><p>简单的说，就是相机能够看到包含物体在内的空间范围。必须选择合适的视野，以保证能够检验你感兴趣的区域。</p>
+<h2 id="9、什么是工作距离？"><a href="#9、什么是工作距离？" class="headerlink" title="9、什么是工作距离？"></a>9、什么是工作距离？</h2><p>​       工作距离是从镜头前部到受检验物体的距离。需要的工作距离越长，保持小视野的难度和成本就越高。通常，人们会出于需要而规定小视野，同时出于方便而规定相当长的工作距离。然而，这种配置会极大地增加成本，往往会降低分辨率，并削弱光学器件的采光能力，从而不必要地降低了系统的总体成像性能。当存在机械限制时（比如在真空箱内部获取某反应的图像），这种配置也许是必要的。</p>
+<h2 id="10、什么是景深？"><a href="#10、什么是景深？" class="headerlink" title="10、什么是景深？"></a>10、什么是景深？</h2><p>假如成像的物体是三维的，那么你还必须考虑景深。镜头的景深是物体离最佳焦点较近或较远时，镜头保持所需分辨率的能力。大的景深能够简化各种安装限制，这是因为不需要进行精确的移动来使物体定位于镜头的额定工作距离。不过要记住，虽然镜头会在规定的景深上保持最小分辨率，但它们不一定会在该景深上保持相同视野。放大倍数的这种变化可能对机器视觉测量应用造成灾难性后果。远心镜头可以把该问题减小到最低程度。</p>
+<!-- more -->
+<p>[TOC]</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vision/" rel="tag"># Vision</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/13/M0001 第一次使用运动控制卡/" rel="next" title="M0001第一次使用运动控制卡">
+                <i class="fa fa-chevron-left"></i> M0001第一次使用运动控制卡
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/11/V0002EagleEye 产品相关FAQ/" rel="prev" title="V0002EagleEye 产品相关FAQ">
+                V0002EagleEye 产品相关FAQ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDA2Mi8xNjU4OQ"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">zhifei.Liu</p>
+              <p class="site-description motion-element" itemprop="description">LearningInPractice</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/Tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/zhifeiLiuHi" target="_blank" title="GitHub">
+                      GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:liuzhifei2011@163.com" target="_blank" title="E-Mail">
+                      E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailtoliuzhifei2011.337538@m.yinxiang.com" target="_blank" title="Evernote">
+                      Evernote</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.linkedin.com/in/zhifei-liu/" target="_blank" title="Linkedin">
+                      Linkedin</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、机器视觉的概念"><span class="nav-number">1.</span> <span class="nav-text">1、机器视觉的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、机器视觉系统中一定需要光源吗？"><span class="nav-number">2.</span> <span class="nav-text">2、机器视觉系统中一定需要光源吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、怎样选择相机？"><span class="nav-number">3.</span> <span class="nav-text">3、怎样选择相机？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、怎样选择镜头？"><span class="nav-number">4.</span> <span class="nav-text">4、怎样选择镜头？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、怎样选择光源？"><span class="nav-number">5.</span> <span class="nav-text">5、怎样选择光源？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、什么是像素？"><span class="nav-number">6.</span> <span class="nav-text">6、什么是像素？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、什么是分辨率？"><span class="nav-number">7.</span> <span class="nav-text">7、什么是分辨率？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、什么是视野？"><span class="nav-number">8.</span> <span class="nav-text">8、什么是视野？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、什么是工作距离？"><span class="nav-number">9.</span> <span class="nav-text">9、什么是工作距离？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、什么是景深？"><span class="nav-number">10.</span> <span class="nav-text">10、什么是景深？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhifei.Liu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">4.2k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
