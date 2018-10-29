@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Motion," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="研华运动控制卡常见错误代码：本文汇总研华运动控制卡的错误代码，便于工程技术人员查找核对。 如您查找后，还是无法确定具体原因，请联系研华工程师。">
+<meta name="keywords" content="Motion">
+<meta property="og:type" content="article">
+<meta property="og:title" content="M0002  研华运动控制卡常见错误代码（2018年10月29号更新）">
+<meta property="og:url" content="http://zhifeiliu.com/2017/10/29/M0002  研华运动控制卡常见错误代码（2018年10月29号更新）/index.html">
+<meta property="og:site_name" content="am{zhifei}">
+<meta property="og:description" content="研华运动控制卡常见错误代码：本文汇总研华运动控制卡的错误代码，便于工程技术人员查找核对。 如您查找后，还是无法确定具体原因，请联系研华工程师。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-29T03:07:35.394Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="M0002  研华运动控制卡常见错误代码（2018年10月29号更新）">
+<meta name="twitter:description" content="研华运动控制卡常见错误代码：本文汇总研华运动控制卡的错误代码，便于工程技术人员查找核对。 如您查找后，还是无法确定具体原因，请联系研华工程师。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zhifeiliu.com/2017/10/29/M0002  研华运动控制卡常见错误代码（2018年10月29号更新）/"/>
+
+
+
+
+
+  <title>M0002  研华运动控制卡常见错误代码（2018年10月29号更新） | am{zhifei}</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">am{zhifei}</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">LearningInPractice</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-motion">
+          <a href="/Motion/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-motion"></i> <br />
+            
+            Motion
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vision">
+          <a href="/Vision/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-vision"></i> <br />
+            
+            Vision
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-daq">
+          <a href="/DAQ/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-DAQ"></i> <br />
+            
+            DAQ
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mas">
+          <a href="/MAS/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-MAS"></i> <br />
+            
+            MAS
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-pac">
+          <a href="/PAC/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-PAC"></i> <br />
+            
+            PAC
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-stategrid">
+          <a href="/StateGrid/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-stateGrid"></i> <br />
+            
+            StateGrid
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/Life/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-life"></i> <br />
+            
+            Life
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-procuct">
+          <a href="/Product/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-product"></i> <br />
+            
+            Procuct
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-Motion" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zhifeiliu.com/2017/10/29/M0002  研华运动控制卡常见错误代码（2018年10月29号更新）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhifei.Liu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="am{zhifei}">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">M0002  研华运动控制卡常见错误代码（2018年10月29号更新）</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-29T08:00:00+08:00">
+                2017-10-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/“Motion”/" itemprop="url" rel="index">
+                    <span itemprop="name">“Motion”</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  8.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  33
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="研华运动控制卡常见错误代码："><a href="#研华运动控制卡常见错误代码：" class="headerlink" title="研华运动控制卡常见错误代码："></a>研华运动控制卡常见错误代码：</h1><p>本文汇总研华运动控制卡的错误代码，便于工程技术人员查找核对。</p>
+<p>如您查找后，还是无法确定具体原因，请联系研华工程师。</p>
+<a id="more"></a>
+<p>研华的技术支持链接为：<a href="http://support.advantech.com.cn/support/new_default.aspx" target="_blank" rel="noopener">http://support.advantech.com.cn/support/new_default.aspx</a></p>
+<p>当然您可以将你的问题发送邮件至：<a href="mailto:liuzhifei2011@163.com" target="_blank" rel="noopener">liuzhifei2011@163.com</a>。</p>
+<p>期待与您的交流。</p>
+<p>如您需要我们远程协助，请您预先安装[QQ]</p>
+<p>(<a href="http://im.qq.com/pcqq/)或(Anydesk)[https://anydesk.com/remote-desktop]" target="_blank" rel="noopener">http://im.qq.com/pcqq/)或(Anydesk)[https://anydesk.com/remote-desktop]</a>.</p>
+<p>更新日期：2017年10月29日</p>
+<p>研华科技深圳分公司</p>
+<h2 id="C-1-错误代码："><a href="#C-1-错误代码：" class="headerlink" title="C.1    错误代码："></a>C.1    错误代码：</h2><p>调用函数列表中的函数时，每个函数都将获得一个返回代码，表示调用结果。用户可根据 Acm_GetErrorMessage  函数查看返回的错误代码：对应的错误信息:，以便进行修改。</p>
+<blockquote>
+<p>返回值    0x00000000</p>
+<p>信息    SUCCESS</p>
+</blockquote>
+<p>下面列出调用函数时常见的错误信息:，并说明产生该错误的可能原因</p>
+<p>对于未有实例的错误，请自行核对后，联系相关技术人员。</p>
+<h2 id="C-2-常见错误"><a href="#C-2-常见错误" class="headerlink" title="C.2    常见错误"></a>C.2    常见错误</h2><blockquote>
+<p>错误代码：    0x80000000 错误信息:    InvalidDevNumber 说明：    无效的设备号</p>
+<p>相关函数：    Acm_AxCamInAx、Acm_AxTangentInGp、Acm_AxGantryInAx、AxLoadConfig</p>
+<p>实例：    调用 Acm_AxCamInAx 函数建立主从轴关系，当设置的从轴不属于该设备时，提 示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000004 错误信息:    MemAllocateFailed</p>
+<p>说明：    Windows 全局堆内存分配失败</p>
+<p>相关函数：    Acm_DevOpen、Acm_GpLoadPath、Acm_DevLoadConfig、 Acm_DevLoadCAMTableFile、Acm_GpAddAxis、Acm_AxOpen</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000005 错误信息:    InvalidHandle 说明：    无效的 Handle</p>
+<p>相关函数：    所有需要输入设备的 Handle、轴 Handle、组 Handle 的函数</p>
+<p>实例：    调用 Acm_AxOpen 函数打开设备，当输入的设备 Handle 不存在或不正确时，提 示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000006 错误信息:    CreateFileFailed 说明：    创建文件失败</p>
+<p>相关函数：    Acm_DevOpen </p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000009 错误信息:    InvalidInputParam 说明：    无效的输入参数</p>
+<p>相关函数：    Acm_EnableMotionEvent、Acm_DevDownloadCAMTable、Acm_DaqDiGetByte 等</p>
+<p>实例：    使用 Acm_DaqDoSetByte API 设置 DO 值时，当输入参数 DOPort 大于连接至设 备的最大 DO Port(FT_DaqDoMaxChan/8)，将提示该错误。</p>
+</blockquote>
+<blockquote>
+<p> 错误代码：    0x8000000a</p>
+<p>错误信息:    PropertyIDNotSupport </p>
+<p>说明：    属性 ID 不支持 相关函数：    设置 / 获取属性函数</p>
+<p>实例：    当板卡不支持该属性时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000000b</p>
+<p>错误信息:    PropertyIDReadOnly </p>
+<p>说明：    属性 ID 只读</p>
+<p>相关函数：    设置属性函数</p>
+<p>实例：    调用设置属性函数设置 FT_DevEmgMap 属性，但该属性只读，因此将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000000d </p>
+<p>错误信息:    InvalidAxCfgVel</p>
+<p>说明：    配置轴的最大运行速度失败 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property API 将轴的最大运行速度 (CFG_AxMaxVel) 设置为 20,000,001 时，由于该值上限为 20,000,000，因此将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000000e </p>
+<p>错误信息:    InvalidAxCfgAcc</p>
+<p>说明：    配置轴的最大加速度失败 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property API 将轴的最大加速度 (CFG_AxMaxAcc) 设置为 2,000,000,001 时，由于该值上限为 2,000,000,000，因此将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000000f </p>
+<p>错误信息:    InvalidAxCfgDec</p>
+<p>说明：    配置轴的最大减速度失败 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property API 将轴的最大减速度 (CFG_ AxMaxDec)) 设置为 2,000,000,001 时，由于该值上限为 2,000,000,000，因此将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000011</p>
+<p>错误信息: InvalidAxParVelLow 说明： 无效的轴的初速度， 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置轴的初速度 (PAR_AxVelLow) 小于零或大于 轴的最大运行速度 (CFG_AxMaxVel) 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000012</p>
+<p>错误信息:    InvalidAxParVelHigh 说明：    无效的轴的运行速度</p>
+</blockquote>
+<p>相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置轴的运行速度 (PAR_AxVelHigh) 小于等于 零或大于轴的最大运行速度 (CFG_AxMaxVel) 时，提示该错误</p>
+<blockquote>
+<p>错误代码：    0x80000013 错误信息:    InvalidAxParAcc </p>
+<p>说明：    无效的轴的加速度。</p>
+<p>相关函数：    Acm_SetF64Property</p>
+<p>实例：调用 Acm_SetF64Property 函数设置轴的加速度小于等于零或大于轴的最大加 速度 (CFG_AxMaxAcc) 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000014 错误信息:    InvalidAxParDec </p>
+<p>说明：    无效的轴的减速度。 </p>
+<p>相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置轴的减速度 PAR_AxDec 小于等于零或大于 轴的最大减速度 (CFG_AxMaxDec) 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000015 错误信息:    InvalidAxParJerk 说明：    无效的轴的加加速度 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 设置加加速度 PAR_AxJerk，该值为 0 或 1，当设置 为其他值时，将提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000016</p>
+<p>错误信息:    InvalidAxPulseInMode 说明：    无效的脉冲输入模式 相关函数：    Acm_SetU32Property</p>
+<p>实例：    调用 Acm_SetF64Property 设置 CFG_AxPulseInMode 属性值，当设置的值不在 输入范围内时，将提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000017</p>
+<p>错误信息:    InvalidAxPulseOutMode 说明：    无效的脉冲输出模式 相关函数：    Acm_SeU32Property</p>
+<p>实例：    调用 Acm_SetF64Property 设置 CFG_AxPulseOutMode 属性值，当设置的值不在 输入范围内时，将提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000002a 错误信息:    InvalidAxState 说明：    无效的轴状态</p>
+<p>相关函数：</p>
+<p>Acm_AxGantryInAx、Acm_AxTangentInGp、Acm_AxGearInAx、Acm_AxCamInAx、 Acm_AxMoveHome、Acm_AxHomeEx、Acm_AxSimStart、 Acm_AxSimStartSuspendVel、Acm_AxSimStartSuspendRel、 Acm_AxSimStartSuspendAbs、Acm_AxChangeVelExByRate、 Acm_AxChangeVelEx、Acm_AxChangeVel、Acm_AxChangeVelByRate</p>
+<p>实例：    例如调用 Acm_AxHome 函数执行回原点，当轴的状态不为 Ready 时，将提示该 错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000002d 错误信息:    InvalidAxDistance 说明：    无效的轴距离</p>
+<p>相关函数：    Acm_AxMoveRel、Acm_AxMoveAbs 等</p>
+<p>调用 Acm_AxMoveRel 函数执行相对点位运动，Distance 的范围为：-<br>实例：    2,147,483,647/PPU ~ 2,147,483,647/PPU。当设定的 Distance 不在该范围内 时，将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000030 错误信息:    InvalidAxCntInGp</p>
+<p>说明：    群组内的轴数不正确。</p>
+<p>相关函数：    Acm_GpMoveArcAbs_Angle、Acm_GpMoveArcRel_Angle 等 实例：    例如执行三轴圆弧插补，当群组的轴数为 2 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000031 错误信息:    AxInGpNotFound</p>
+<p>说明：    该轴没有在群组内。 相关函数：    Acm_GpRemAxis</p>
+<p>实例：    该错误发生在调用 Acm_GpRemAxis 函数移除群组中的轴时，当输入的轴号不在 群组内时发生</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000032 错误信息:    AxisInOtherGp</p>
+<p>说明：    该轴在其他的群组内。 相关函数：    Acm_GpAddAxis</p>
+<p>实例：    当调用 Acm_GpAddAxis 函数添加轴到群组，输入的轴号已经添加到其他群组时 提示该错误。每个轴只能存在一个群组内</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000033 错误信息:    AxCannotIntoGp</p>
+<p>说明：    不能添加轴到群组内。 相关函数：    Acm_GpAddAxis</p>
+<p>实例：    例如 PCI-1245V 支持群组轴数最多为 2 个，当调用 Acm_GpAddAxis 函数添加第 三个轴到群组时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000039</p>
+<p>错误信息:    InvalidGpParVelLow </p>
+<p>说明：    群组初速度无效</p>
+</blockquote>
+<p>相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 设置群组初始速度 (PAR_GpVelLow) 时，若该值小于 0 或大于最大运行速度 (CFG_AxMaxVel)，则提示该错误</p>
+<p>错误代码：    0x8000003a</p>
+<p>错误信息:    InvalidGpParVelHigh 说明：    群组运行速度无效</p>
+<p>相关函数：    Acm_GpMoveCircularRel、Acm_GpMoveCircularAbs、Acm_GpChangeVelByRate   等</p>
+<p>实例：    调用 Acm_GpChangeVel 函数改变群组运行速度，当设置的新速度小于 0 或大于 CFG_AxMaxVel 的值时，提示该错误</p>
+<blockquote>
+<p>错误代码：    0x8000003b 错误信息:    InvalidGpParAcc 说明：    群组加速度无效 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 PAR_GpAcc 的值，若该值大于 CFG_AxMaxAcc 或小于 0 时，则提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000003c </p>
+<p>错误信息:    InvalidGpParDec </p>
+<p>说明：    群组减速度无效</p>
+<p>相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 PAR_GpDec 的值，若该值大于 CFG_AxMaxDec 或小于 0 时，则提示该错误</p>
+</blockquote>
+<p>错误代码：    0x8000003d 错误信息:    InvalidGpParJerk</p>
+<p>说明：    无效的群组曲线类型。 Acm_GpMoveCircularRel_Angle、Acm_GpMoveCircularAbs_Angle、</p>
+<p>相关函数：</p>
+<p>Acm_GpMoveArcRel_Angle、Acm_GpMoveArcAbs_Angle、<br>Acm_GpMoveHelixAbs_Angle、 Acm_GpMoveHelixRel_Angle、 Acm_GpMove3DArcAbs_V、Acm_GpMove3DArcRel_V</p>
+<p>实例：    调用函数 Acm_GpMoveCircularRel_Angle 执行角度圆弧插补，当设置的曲线类 型 PAR_GpJerk为S 时，提示错误</p>
+<blockquote>
+<p>错误代码：    0x8000003e 错误信息:    JerkNotSupport 说明：    不支持 S 型曲线 相关函数：    Acm_GpAddPath</p>
+<p>实例：    调用 Acm_GpAddPath 函数，设置 MoveMode 为 Blending Mode 或 FlyMode，这 两种模式不支持 S 型曲线类型</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000041 错误信息:    InvalidGpState 说明：    无效的群组状态</p>
+</blockquote>
+<blockquote>
+<p>相关函数：    Acm_GpClose、Acm_GpChangeVelByRate、Acm_GpChangeVel 调用 Acm_GpClose 函数关闭群组，当群组状态<br>实例：    usState!=STA_GP_DISABLE&amp;&amp;usState!= STA_GP_READY&amp;&amp;usState!=<br>STA_GP_ERROR_STOP 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000042 错误信息:    OpenFileFailed 说明：    打开文件失败。</p>
+<p>相关函数：    Acm_DevLoadConfig、Acm_GpLoadPath、Acm_DevLoadCAMTableFile </p>
+<p>实例：</p>
+</blockquote>
+<p>错误代码：    0x80000043 错误信息:    InvalidPathCnt 说明：    无效的 Path 数</p>
+<p>相关函数：    Acm_GpLoadPath、Acm_DevLoadCAMTableFile</p>
+<p>调用 Acm_GpLoadPath 函数下载 Path 文件，当 Path 数小于 2 或大于 600 时，<br>实例：    提示错误，调用 Acm_DevLoadCAMTableFile 函数加载 CAM 表文件，当表内点数 小于 2 大于 100,000 时，提示错误</p>
+<p>错误代码：    0x80000044 错误信息:    InvalidPathHandle</p>
+<p>说明：    无效的 Path Handle。</p>
+<p>相关函数：    Acm_GpLoadPath、Acm_GpUnloadPath</p>
+<p>实例：    调用 Acm_GpLoadPath 和 Acm_GpUnloadPath 函数加载和卸载函数时，输入的 Path Handle 不存在或不正确时，提示该错误</p>
+<p>错误代码：    0x8000004A 错误信息:    InvalidSlaveIP 说明：    无效的从轴 IP。</p>
+<p>相关函数：    支持 SlaveIP 输入的所有函数</p>
+<p>实例：    调用 Acm_DevGetSlaveInfo 获取从轴信息时，若设备中不存在 SlaveIP，则提 示该错误</p>
+<p>错误代码：    0x80000054</p>
+<p>错误信息:    FunctionNotSupport 说明：    功能函数不支持。</p>
+<p>相关函数：    所有函数</p>
+<p>实例：    当板卡不支持该功能时，提示该错误</p>
+<p>错误代码：    0x80000055</p>
+<p>错误信息:    InvalidPhysicalAxis 说明：    无效的物理轴。 相关函数：    Acm_DevMDaqConfig</p>
+<p>实例：    调用 Acm_DevMDaqConfig 函数设定 MDaq 相关配置，当指定的轴号大于板卡的 轴数时，提示该错误。</p>
+<p>错误代码：    0x80000069</p>
+<p>错误信息:    InvalidPath</p>
+<p>对于 PCI-1240 板卡，提示该错误有两种情况<br>1、加载的 Path 为两轴直线、圆弧插补，但群组轴数大于 2 时，提示该错误<br>2、当加载的 Path 为多轴 ( 大于等于3轴) 直线插补，但群组的轴数小于 3 说明：    时，提示该错误<br>对于其他 PCI 运动控制卡，当用户添加到群组的轴数小于执行 Path 所需的轴 数时，提示该错误</p>
+<p>相关函数：    Acm_GpLoadPath</p>
+<p>实例：    调用 Acm_GpLoadPath 函数加载 Path 文件，添加到群组中的轴数为 2，但 Path 文件中有 3 轴执行插补的 PATH, 该情况下，将提示该错误</p>
+<p>错误代码：    0x80000073 错误信息:    InvalidGpHandle 说明：    群组 Handle 无效</p>
+<p>相关函数：    调用的函数参数有群组的 Handle</p>
+<p>实例：    调用 Acm_GpGetPathStatus 函数获取 Path 状态，当输入的群组 Handle 不正确 时，提示该错误</p>
+<p>错误代码：    0x80000075 错误信息:    InvalidCmpMethod 说明：    无效的比较方法 相关函数：    Acm_SetU32Property</p>
+<p>实例：    调用上述函数设置属性 CFG_AxCmpMethod，该属性可设置为 0( 大于等于位置 计数器 ) 或 1( 小于等于位置计数器 )，当设置为其他值时，提示该错误</p>
+<p>错误代码：    0x8000007b</p>
+<p>错误信息:    SpeedFordFunNotSpported 说明：    当前模式不支持速度前瞻功能 相关函数：    Acm_GpAddPath</p>
+<p>实例：    当调用函数 Acm_GpAddPath 添加 Path， 且 MoveMode 为 BufferMode 或 BlendingMode 时，开启速度前瞻 CFG_GpSFEnable 功能将提示该错误</p>
+<p>错误代码：    0x80000081</p>
+<p>错误信息:    InvalidAxParHomeVelLow 说明：    无效的 Home 初速度 相关函数：    Acm_SetF64 Property</p>
+<p>调用 Acm_SetF64 Property 函数设置 Home 执行时的初速度 (<br>实例：    Par_AxHomeVelLow)，当设置的值小于等于 0 或大于 CFG_AxMaxVel 的值时，提 示该错误</p>
+<p>错误代码：    0x80000082</p>
+<p>错误信息:    InvalidAxParHomeVelHigh 说明：    无效的 Home 运行速度 相关函数：    Acm_SetF64 Property</p>
+<p>调用 Acm_SetF64Property 函数设置 Home 执行时的运行速度<br>实例：    (Par_AxHomeVelHigh)，当设置的值小于等于 0 或大于 CFG_AxMaxVel 的值时， 提示该错误</p>
+<p>错误代码：    0x80000083</p>
+<p>错误信息:    InvalidAxParHomeAcc 说明：    无效的 Home 加速度 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 Home 执行时的加速度 (Par_AxHomeAcc)， 当设置的值小于等于 0 或大于 CFG_AxMaxAcc 的值时，提示该错误</p>
+<p>错误代码：    0x80000084</p>
+<p>错误信息:    InvalidAxParHomeDec 说明：    无效的 Home 减速度 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 Home 执行时的减速度 (Par_AxHomeDec)， 当设置的值小于等于 0 或大于 CFG_AxMaxDec 的值时，提示该错误</p>
+<blockquote>
+<p>错误代码：    0x80000085</p>
+<p>错误信息:    InvalidAxParHomeJerk 说明：    无效的 Home 加速曲线类型 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 Home 执行时的速度曲线类型 (Par_AxHomeJerk)，速度类型为 0 或 1，当设置为其他值时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000086</p>
+<p>错误信息:    InvalidAxCfgJogVelLow 说明：    无效的 Jog 初速度 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64 Property 函数设置 Jog 的初速度 ( CFG_AxJogVelLow)，当设 置的值小于等于 0 或大于 CFG_AxMaxVel 的值时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000087</p>
+<p>错误信息:    InvalidAxCfgJogVelHigh 说明：    无效的 Jog 运行速度 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64 Property 函数设置 Jog 的运行速度 ( CFG_AxJogVelHigh)， 当设置的值小于等于 0 或大于 CFG_AxMaxVel 的值时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000088</p>
+<p>错误信息:    InvalidAxCfgJogAcc 说明：    无效的 Jog 加速度 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64 Property 函数设置 Jog 的加速度 ( CFG_AxJogVelAcc)，当设 置的值小于等于 0 或大于 CFG_AxMaxAcc 的值时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80000089</p>
+<p>错误信息:    InvalidAxCfgJogDec 说明：    无效的 Jog 减速度 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64 Property 函数设置 Jog 的加速度 ( CFG_AxJogVelDec)，当设 置的值小于等于 0 或大于 CFG_AxMaxDec 的值时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000008A</p>
+<p>错误信息:    InvalidAxCfgJogJerk 说明：    无效的 Jog 加速曲线类型 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64 Property 函数设置 Jog 的速度曲线类型 ( CFG_AxJogJerk)， 该属性只能设置为 0，当设置为其他值时，提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000008B</p>
+<p>错误信息:    InvalidAxCfgKillDec 说明：    无效的 DI 减速度 相关函数：    Acm_SetF64 Property</p>
+<p>实例：    调用 Acm_SetF64 Property 函数设置 DI Stop 的减速度，当设置的值小于等于 零大于 FT_AxMaxDec 属性值时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000008C </p>
+<p>错误信息:    NotOpenAllAxes</p>
+<p>说明：    未打开所有轴，LoadCfg 时有轴未 Open </p>
+<p>相关函数：    Acm_DevLoadConfig</p>
+<p>实例：    调用 Acm_DevLoadConfig 函数下载配置文件时，板卡的所有轴都必须打开，否则提示该错误</p>
+</blockquote>
+<p>错误代码：    0x800000d0 </p>
+<p>错误信息:    ReadFileFailed </p>
+<p>说明：    读取文件失败。</p>
+<p>相关函数：    Acm_DevLoadConfig</p>
+<p>实例：调用函数载入配置文件或镜像表格文件时，若因操作系统错误导致文件错误或 打开文件失败，则提示该错误</p>
+<blockquote>
+<p>错误代码：    0x800000d3</p>
+<p>错误信息:    GetAuthorityFailed</p>
+<p>说明：    PCI-1203 在开卡时扫描 EtherCAT 网络及改变状态机时 SDO 超时 </p>
+<p>相关函数：    Acm_DevOpen, Acm_DevReOpen</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000d6 错误信息:    InvalidGpRadius</p>
+<p>说明：    设置的群组半径不正确</p>
+<p>相关函数：    圆弧插补</p>
+<p>实例：    当执行圆弧插补时，设置的半径不正确</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000d9 错误信息:    InvalidGpMovCmd</p>
+<p>说明：    无效的 Path 运行命令</p>
+<p>相关函数：    Acm_GpLoadPath、Acm_GpAddPath</p>
+<p>实例：    调用 Acm_GpLoadPath、Acm_GpAddPath 函数。设置的运行命令不在支持的范围 内时，提示该错误。或者添加的运行命令板卡不支持</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000dc</p>
+<p>错误信息:    InvalidPathMoveMode 说明：    无效的 Path 运动模式。 相关函数：    Acm_GpAddPath</p>
+<p>实例：    函数 Acm_GpAddPath 设置参数 MoveMode，该值为0或 1，当设置为其他值时， 提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000de 错误信息:    InvalidCamTableID </p>
+<p>说明：    无效的凸轮表 ID</p>
+<p>相关函数：    Acm_DevDownloadCAMTable</p>
+<p>实例：    函数 Acm_DevDownloadCAMTable 的参数 CAM 表的 ID 要求为0或 1. 当设置为其 他值时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000df</p>
+<p>错误信息:    InvalidCamPointRange</p>
+<p>说明：    无效的凸轮执行点的范围。 </p>
+<p>相关函数：    Acm_DevDownloadCAMTable</p>
+<p>实例：    调用 Acm_DevDownloadCAMTable 函数。当参数 pPointRangeArray[i] 大于 (pMasterArray[i] - pMasterArray[i-1])*0.5) 时提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000e0 错误信息:    CamTableIsEmpty 说明：    凸轮表为空。</p>
+</blockquote>
+<blockquote>
+<p>相关函数：    Acm_DevConfigCAMTable</p>
+<p>实例：    调用 Acm_DevConfigCAMTable 函数配置凸轮表。当凸轮表的没有值时，提示该 错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000e1</p>
+<p>错误信息:    InvalidPlaneVector </p>
+<p>说明：    设置的平面向量值无效 </p>
+<p>相关函数：    Acm_AxTangentInGp</p>
+<p>调用 Acm_AxTangentInGp 函数建立轴和群组切线跟随关系，设置向量<br>实例：    StartVectorArray 的值，该向量必须为 3 维。当设置的 3 维向量都是 0 时， 提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000e2</p>
+<p>错误信息:    MasAxIDSameSlvAxID </p>
+<p>说明：    主轴 ID 和从轴 ID 相同</p>
+<p>相关函数：    Acm_AxCamInAx、Acm_AxGantryInAx、Acm_AxGearInAx</p>
+<p>实例：    调用 Acm_AxCamInAx 函数建立主从轴关系，当主轴和从轴设置为同一轴时，提 示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000e3 错误信息:    InvalidGpRefPlane 说明：    无效的组的参考平面</p>
+<p>相关函数：    圆弧插补、螺旋插补、添加 Path</p>
+<p>调用 Acm_GpMoveCircularRel_3P 函数执行 3 点圆弧插补，设置参考平面为 YZ<br>实 例    平面，当群组中的轴个数小于 3 时，提示该错误 当群组中的轴数小于 3 时，提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x800000e4</p>
+<p>错误信息:    InvalidAxModuleRange </p>
+<p>说明：    设置的轴的单圈脉冲数无效 相关函数：    Acm_SetU32Property</p>
+<p>实例：    调用 Acm_SetU32Property 函数，设置属性 CFG_AxModuleRange，当设置的值 大于 8,000,000 或者该值不能被 4 整除时，提示错误</p>
+</blockquote>
+<p>错误代码：    0x800000e5</p>
+<p>错误信息:    DownloadFileFailed 说明：    下载文件失败 相关函数：</p>
+<p>实例：</p>
+<p>错误代码：    0x800000e6 </p>
+<p>错误信息:    InvalidFileLength </p>
+<p>说 明：    无效的文件长度 </p>
+<p>相关函数：</p>
+<p>实 例：</p>
+<p>错误代码：    0x800000e7 错误信息:    InvalidCmpCnt </p>
+<p>说明：    无效的比较个数</p>
+<p>相关函数：    Acm_AxSetCmpTable、Acm_AxSetCmpAuto</p>
+<p>实    例    调用 Acm_AxSetCmpTable 设置比较表，函数中的参数 ArrayCount 设置为大于 100,000 或小于 0 时，提示该错误</p>
+<blockquote>
+<p>错误代码：    0x80004001 错误信息:    DevEvtTimeOut</p>
+<p>说 明：检测事件时间超时。 相关函数：    Acm_CheckMotionEvent</p>
+<p>实例：调用 Acm_CheckMotionEvent 检测运动事件时，若规定时间内没有检测到任何 事件，则提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80004002</p>
+<p>错误信息:    DevNoEvt</p>
+<p>说明：    事件未发生。 相关函数：    Acm_CheckMotionEvent</p>
+<p>实例：    调用 Acm_CheckMotionEvent 函数检测事件时，没有检测到事件时将提示该错 误。</p>
+</blockquote>
+<h2 id="C-3-DSP-常见错误"><a href="#C-3-DSP-常见错误" class="headerlink" title="C.3    DSP 常见错误"></a>C.3    DSP 常见错误</h2><p>错误代码：    0x10000001 错误信息:    Warning_AxWasInGp</p>
+<p>说明：    该轴已经添加到群组里 相关函数：    Acm_GpAddAxis</p>
+<p>实例：    调用上述函数添加轴到群组中时，当该轴以在群组中时，提示该错误</p>
+<p>错误代码：    0x80005001 错误信息:    ERR_SYS_TIME_OUT 说明：    系统超时</p>
+<p>相关函数： 实例：</p>
+<p>错误代码：    0x80005002</p>
+<p>错误信息:    Dsp_PropertyIDNotSupport 说明：    PropertyID 不支持 相关函数：    获取 / 设置属性的函数</p>
+<p>实例：    板卡不支持该属性 ID 时，提示该错误</p>
+<blockquote>
+<p>错误代码：    0x80005003</p>
+<p>错误信息:    Dsp_PropertyIDReadOnly 说明：    PropertyID 只读 相关函数：    设置属性的函数</p>
+<p>实例：    属性 FT_AxFunctionMap 只读，当调用设置属性的函数设置该属性时，提示错 误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005004</p>
+<p>错误信息:    Dsp_InvalidParameter 说明：    无效的输入参数 相关函数：    Acm_DaqDoSetByte 等</p>
+<p>实例：    调用 Acm_DaqDoSetByte 函数设置 DO 字节数，当输入的参数 DOPort 大于最大 DOPort(FT_DaqDoMaxChan/8) 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005005</p>
+<p>错误信息:    Dsp_DataOutBufExceeded 说明：    数据缓存不足</p>
+<p>相关函数： </p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005006</p>
+<p>错误信息:    Dsp_FunctionNotSupport 说明：    功能函数不支持</p>
+<p>相关函数：    Acm_GpMove3DArcAbs、Acm_GpMove3DArcRel 等 实例：    运动控制卡不支持该函数时，将提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005007</p>
+<p>错误信息:    Dsp_InvalidConfigFile 说明：    无效的配置文件 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005008</p>
+<p>错误信息:    Dsp_InvalidIntervalData 说明：    无效的间隔数据</p>
+<p>相关函数： 实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005009</p>
+<p>错误信息:    Dsp_InvalidTableSize 说明：    无效的表格大小 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p> 错误代码：    0x8000500a</p>
+<p>错误信息:    Dsp_InvalidTableID</p>
+<p>说明：    无效的凸轮表 ID 或者比较列表 ID 相关函数：    Acm_DevDownloadCAMTable</p>
+<p>实例：    函数 Acm_DevDownloadCAMTable 的参数 CAM 表的 ID 要求为0或 1. 当设置为其 他值时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000500b</p>
+<p>错误信息:    Dsp_DataIndexExceedBufSize</p>
+<p>说明：    超过比较列表的最大点数 （100000）或单次读取点数超过最大点数 （32） 相关函数：    Acm_AxSetCmpTable、Acm_AxSetCmpAuto、Acm_AxReadLatchBuffer</p>
+<p>实例：    调用 Acm_AxSetCmpTable 函数设置比较表，该表支持的最多比较数据为 100,000 个，当超出时，提示该错误</p>
+</blockquote>
+<p>错误代码：    0x8000500c</p>
+<p>错误信息:    Dsp_InvalidCompareInterval 说明：    无效的比较间隔</p>
+<p>相关函数：    Acm_AxSetCmpAuto 实例：</p>
+<p>错误代码：    0x8000500d</p>
+<p>错误信息:    Dsp_InvalidCompareRange</p>
+<p>说明：    比较列表的起点数据和终点数据的距离小于比较间隔 相关函数：    Acm_AxSetCmpAuto</p>
+<p>实例：    当调用上述函数设置线性比较数据，当起点数据和终点数据的距离小于比较间 隔时，提示该错误</p>
+<p>错误代码：    0x8000500e</p>
+<p>错误信息:    Dsp_PropertyIDWriteOnly 说明：    该属性只读</p>
+<p>相关函数：    获取属性函数</p>
+<p>实例：    当调用函数获取的属性信息为只写属性时，提示错误</p>
+<p>错误代码：    0x8000500f</p>
+<p>错误信息:    Dsp_NcError</p>
+<p>说明：    NC 错误 相关函数：</p>
+<p>实例：</p>
+<p>错误代码：    0x80005010</p>
+<p>错误信息:    Dsp_CamTableIsInUse</p>
+<p>说明：    当前 ID 的凸轮表正在被使用 相关函数：    Acm_AxCamInAx</p>
+<p>实例：</p>
+<blockquote>
+<p>错误代码：    0x80005011</p>
+<p>错误信息:    Dsp_EraseBlockFailed 说明：    擦除 block 失败 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005012</p>
+<p>错误信息:    Dsp_ProgramFlashFailed 说明：    存储 (Flash) 程序失败 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005101</p>
+<p>错误信息:    Dsp_InvalidAxCfgVel</p>
+<p>说明：    配置轴的最大运行速度失败 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 将最大运行速度 (CFG_AxMaxVel) 设置为 20,000,001 时，由于该值上限为 20,000,000，因此将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005102</p>
+<p>错误信息:    Dsp_InvalidAxCfgAcc 说明：    配置轴的最大加速度失败 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 将最大加速度 (CFG_AxMaxAcc) 设置为 2,000,000,001 时，由于该值上限为 2,000,000,000，因此将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005103</p>
+<p>错误信息:    Dsp_InvalidAxCfgDec 说明：    配置轴的最大减速度失败 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 将最大减速度 (CFG_ AxMaxDec) 设置为 2,000,000,001 时，由于该值上限为 2,000,000,000，因此将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005104</p>
+<p>错误信息:    Dsp_InvalidAxCfgJerk </p>
+<p>说明：    配置轴的加加速度失败 </p>
+<p>相关函数：    Acm_SetF64Property </p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005105</p>
+<p>错误信息:    Dsp_InvalidAxParVelLow </p>
+<p>说明：    无效的轴的初速度， </p>
+<p>相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置轴的初速度 (PAR_AxVelLow) 小于零或大于 轴的最大运行速度 (CFG_AxMaxVel) 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005106</p>
+<p>错误信息:    Dsp_InvalidAxParVelHigh </p>
+<p>说明：    无效的轴的运行速度</p>
+<p>相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置轴的运行速度 (PAR_AxVelHigh) 小于等于 零或大于轴的最大运行速度 (CFG_AxMaxVel) 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005107</p>
+<p>错误信息:    Dsp_InvalidAxParAcc 说明：    无效的轴的加速度 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置轴的加速度 PAR_AxAcc 小于等于零或大于 轴的最大加速度 (CFG_AxMaxAcc) 时，提示该错误</p>
+</blockquote>
+<p>错误代码：    0x80005108</p>
+<p>错误信息:    Dsp_InvalidAxParDec 说明：    无效的轴的减速度 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置轴的加速度 PAR_AxAcc 小于等于零或大于 轴的最大减速度 (CFG_AxMaxAcc) 时，提示该错误</p>
+<blockquote>
+<p>错误代码：    0x80005109</p>
+<p>错误信息:    Dsp_InvalidAxParJerk 说明：    无效的轴的加加速度 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用上述函数设置加加速度 PAR_AxJerk，该值为 0 或 1，当设置为其他值时， 将提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000510a</p>
+<p>错误信息:    Dsp_InvalidAxPptValue 说明：    无效的属性值</p>
+<p>相关函数： 实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000510b</p>
+<p>错误信息:    Dsp_InvalidAxState 说明：    无效的轴状态</p>
+<p>相关函数：     Acm_AxMoveVel，Acm_AxStopDec 等</p>
+<p>实例：        当轴的状态不是 Ready 时，若执行连续运动，将提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000510c</p>
+<p>错误信息: Dsp_InvalidAxSvOnOff </p>
+<p>说明： 无效的伺服开 / 关操作 </p>
+<p>相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000510d</p>
+<p>错误信息:    Dsp_InvalidAxDistance </p>
+<p>说明：    无效的轴距离</p>
+<p>相关函数：    Acm_AxMoveImpose </p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000510e</p>
+<p>错误信息:    Dsp_InvalidAxPosition </p>
+<p>说明：    无效位置</p>
+<p>相关函数： 实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000510f</p>
+<p>错误信息:    Dsp_InvalidAxHomeMode </p>
+<p>说明：    无效的 home 模式</p>
+<p>相关函数：    Acm_AxHome</p>
+<p>实例：        轴的回 Home 共 16 种模式，当输入的值不在该范围内时，提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005110</p>
+<p>错误信息:    Dsp_InvalidPhysicalAxis </p>
+<p>说明：    无效的轴 ID</p>
+<p>相关函数：     Acm_DevMDaqConfig 等</p>
+<p>实例：    调用 Acm_DevMDaqConfig 函数设定 MDaq 相关配置，当指定的轴号大于板卡的 轴数时，提示该错误。</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005111 </p>
+<p>错误信息:    Dsp_HLmtPExceeded </p>
+<p>说明：    超出正向硬极限 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005112 </p>
+<p>错误信息:    Dsp_HLmtNExceeded </p>
+<p>说明：    超出负向硬极限 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005113 </p>
+<p>错误信息:    Dsp_SLmtPExceeded </p>
+<p>说明：    超出正向软极限 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005114 错误信息:    Dsp_SLmtNExceeded </p>
+<p>说明：    超出负向软极限 </p>
+<p>相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005115 </p>
+<p>错误信息:    Dsp_AlarmHappened </p>
+<p>说明：    Alarm 信号发生 </p>
+<p>相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005116 </p>
+<p>错误信息:    Dsp_EmgHappened </p>
+<p>说明：    Emg 信号发生 </p>
+<p>相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005117</p>
+<p>错误信息: Dsp_CmdValidOnlyInConstSec 说明： 叠加运动只能在匀速阶段执行 相关函数：    Acm_AxMoveImpose</p>
+<p>实例：    当在非匀速段添加叠加运动时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005118 错误信息:    Dsp_InvalidAxCmd 说明：    无效的轴命令 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005119</p>
+<p>错误信息:    Dsp_InvalidAxHomeDirMode 说明：    无效的回 home 方向</p>
+<p>相关函数：    Acm_AxHome </p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000511a</p>
+<p>错误信息:    Dsp_AxisMustBeModuloAxis 说明：    切向跟随轴模式不能为 0 相关函数：    Acm_AxTangentInGp</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000511b</p>
+<p>错误信息:    Dsp_AxIdCantSameAsMasId 说明：    从轴 ID 不能与主轴相同</p>
+<p>相关函数：    Acm_AxCamInAx，Acm_AxGearInAx、Acm_AxGantryInAx</p>
+<p>实例：    调用 Acm_AxCamInAx 建立主轴和从轴之间的关系时，主轴与从轴必须为不同的 轴，否则将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000511c</p>
+<p>错误信息:    Dsp_CantResetPosiOfMasAxis</p>
+<p>说明：    同步状态下不能设置理论位置或实际位置</p>
+<p>相关函数：    Acm_AxSetCmdPosition，Acm_AxSetActualPosition 实例：    在同步状态下，不能调用上述函数重置位置</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000511d</p>
+<p>错误信息:    Dsp_InvalidAxExtDrvOperation 说明：    无效的轴外部驱动操作</p>
+<p>相关函数：    Acm_AxSetExtDrive 实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000511e</p>
+<p>错误信息:    Dsp_AxAccExceededMaxAcc 说明：    轴加速度超出最大加速度 相关函数：</p>
+<p>实 例</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000511f</p>
+<p>错误信息:    Dsp_AxVelExceededMaxVel 说明：    轴运行速度超出最大速度 相关函数：    Acm_AxChangeVel</p>
+<p>实例：    调用上述函数设置轴的新速度，当该值超过最大运行速度时，提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005201</p>
+<p>错误信息:    Dsp_InvalidAxCntInGp</p>
+<p>说明：    执行运动的轴数量与群组中的轴数量不一致 相关函数：    Acm_GpMoveLinearRel，Acm_GpMoveCircularRel 等</p>
+<p>实例：    例如执行三轴执行插补，群组中的轴数为 2，则提示错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005202</p>
+<p>错误信息:    Dsp_AxInGpNotFound 说 明    未在群组中找到相应轴 相关函数：    Acm_GpRemAxis</p>
+<p>实 例    调用 Acm_GpRemAxis 移除轴 1，但是轴 1 未在该群组内，将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005203 错误信息:    Dsp_AxisInOtherGp</p>
+<p>说    明    需要添加的轴已经在其他群组中 相关函数：    Acm_GpAddAxis</p>
+<p>实    例    调用 Acm_GpAddAxis 添加轴到群组中，当该轴已在其他群组中时，提示该错 误。每个轴仅能存在于一个群组中。</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005204</p>
+<p>错误信息:    Dsp_AxCannotIntoGp</p>
+<p>说 明    无法将轴加入群组。添加的轴无效或者群组中的轴数量已经达到上限 相关函数：    Acm_GpAddAxis</p>
+<p>实    例    调用 Acm_GpAddAxis 添加第 9 轴到群组中时，由于超过一个群组支持的最大轴 数 （8 轴），因此将报错</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005205</p>
+<p>错误信息:    Dsp_GpInDevNotFound 说明：    群组未找到</p>
+<p>相关函数： 实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005206</p>
+<p>错误信息:    Dsp_InvalidGpCfgVel 说明：    无效的群组速度 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005207</p>
+<p>错误信息:    Dsp_InvalidGpCfgAcc 说明：    无效的群组加速度 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005208</p>
+<p>错误信息:    Dsp_InvalidGpCfgDec 说明：    无效的群组减速度 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x80005209</p>
+<p>错误信息:    Dsp_InvalidGpCfgJerk 说明：    无效的群组加加速度 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000520a</p>
+<p>错误信息:    Dsp_InvalidGpParVelLow 说明：    群组起始速度无效 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 PAR_GpVelLow 的值大于 CFG_AxMaxVel 或 小于 0 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000520b</p>
+<p>错误信息:    Dsp_InvalidGpParVelHigh 说明：    群组运行速度无效 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 PAR_GpVelHigh 的值大于 CFG_AxMaxVel 或 小于 0 时，提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8000520c</p>
+<p>错误信息:    Dsp_InvalidGpParAcc 说明：    群组加速度无效 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 PAR_Gp Acc 的值大于 CFG_AxMaxAcc 或小 于 0 时，提示该错误</p>
+</blockquote>
+<p>错误代码：    0x8000520d</p>
+<p>错误信息:    Dsp_InvalidGpParDec 说明：    群组减速度无效 相关函数：    Acm_SetF64Property</p>
+<p>实例：    调用 Acm_SetF64Property 函数设置 PAR_Gp Dec 的值大于 CFG_AxMaxDec 或小 于 0 时，提示该错误</p>
+<p>错误代码：    0x8000520e</p>
+<p>错误信息:    Dsp_InvalidGpParJerk 说明：    群组速度曲线类型无效</p>
+<p>Acm_GpMoveCircularRel_Angle、Acm_GpMoveCircularAbs_Angle、</p>
+<p>相关函数：</p>
+<p>Acm_GpMoveArcRel_Angle、Acm_GpMoveArcAbs_Angle、 Acm_GpMoveHelixAbs_Angle、 Acm_GpMoveHelixRel_Angle、 Acm_GpMove3DArcAbs_V、Acm_GpMove3DArcRel_V</p>
+<p>实例：    调用函数 Acm_GpMoveCircularRel_Angle 执行角度圆弧插补，当设置的曲线类 型 PAR_GpJerk 为 S 时，提示错误</p>
+<p>错误代码：    0x8000520f</p>
+<p>错误信息:    Dsp_JerkNotSupport 说明：    不支持加加速度 相关函数：</p>
+<p>实例：</p>
+<p>错误代码：    0x80005210</p>
+<p>错误信息:    Dsp_ThreeAxNotSupport 说明：    不支持三轴</p>
+<p>相关函数： 实例：</p>
+<p>错误代码：    0x80005211</p>
+<p>错误信息:    Dsp_DevIpoNotFinished 说明：    未完成设备插补 相关函数：</p>
+<p>实例：</p>
+<p>错误代码：    0x80005212</p>
+<p>错误信息:    Dsp_InvalidGpState 说明：    无效的群组状态</p>
+<p>相关函数：    Acm_GpMoveLinearRel，Acm_GpMoveCircularRel 等</p>
+<p>实例：    调用上面函数执行直线插补运动，当群组的状态不是 Ready 时，提示该错误</p>
+<p>错误代码：    0x80005213</p>
+<p>错误信息:    Dsp_OpenFileFailed 说明：    打开文件失败 相关函数：</p>
+<p>实例：</p>
+<p>错误代码：    0x80005214</p>
+<p>错误信息:    Dsp_InvalidPathCnt 说明：    无效的 path 数量 相关函数：    Acm_GpMovePath</p>
+<p>实例：    调用 Acm_GpLoadPath 载入路径文件时，若路径数小于 2，则提示该错误</p>
+<p>错误代码：    0x80005215</p>
+<p>错误信息:    Dsp_InvalidPathHandle 说明：    无效的路径句柄 相关函数：</p>
+<p>实例：</p>
+<p>错误代码：    0x80005216 错误信息:    Dsp_InvalidPath 说明：    无效路径 相关函数：</p>
+<p>实例：</p>
+<p>错误代码：    0x80005217</p>
+<p>错误信息:    Dsp_GpSlavePositionOverMaster 说明：    从轴位置超过主轴位置</p>
+<p>相关函数： 实例：</p>
+<p>错误代码：    0x80005219</p>
+<p>错误信息:    Dsp_GpPathBufferOverflow</p>
+<p>说明：    群组中的 Path 缓存区已满 （7,000） 相关函数：    Acm_GpAddPath</p>
+<p>实例：    调用 Acm_GpAddPath 函数添加的 Path 数超过 7,000 段时，提示该错误</p>
+<p>错误代码：    0x8000521a</p>
+<p>错误信息:    Dsp_InvalidPathFunctionID 说明：    无效的路径函数 ID</p>
+<p>相关函数： 实例：</p>
+<p>错误代码：    0x8000521b</p>
+<p>错误信息:    Dsp_SysBufAllocateFailed 说明：    分配系统缓存失败</p>
+<p>相关函数： 实例：</p>
+<p>错误代码：    0x8000521c</p>
+<p>错误信息:    Dsp_InvalidGpCenterPosition 说明：    无效的群组圆心位置</p>
+<p>相关函数：    Acm_GpMove3DArcRel、Acm_GpMove3DArcAbs、Acm_GpMove3DArcAbs_V、 Acm_GpMove3DArcAbs_V</p>
+<p>实例：    调用上述函数执行 3D 圆弧插补，输入的中心点不正确时，提示该错误</p>
+<p>错误代码：    0x8000521d</p>
+<p>错误信息:    Dsp_InvalidGpEndPosition 说明：    无效的群组终点位置</p>
+<p>相关函数：    Acm_GpMove3DArcRel、Acm_GpMove3DArcAbs</p>
+<p>实例：    调用上述函数执行 3D 圆弧插补，输入的终点不正确时，提示该错误</p>
+<p>错误代码：    0x8000521e 错误信息:    Dsp_InvalidGpCmd 说明：    无效的群组命令 相关函数：</p>
+<p>实例：</p>
+<p>错误代码：    0x8000521f</p>
+<p>错误信息:    Dsp_AxHasBeenInInGp 说明：    轴已经在群组中</p>
+<p>相关函数：    Acm_GpAddAxis、Acm_AxGearInAx 等</p>
+<p>实例：    调用函数 Acm_AxGearInAx 建立齿轮关系，当该轴已经和其他轴建立齿轮关系 时，提示该错误</p>
+<p>错误代码：    0x80005220</p>
+<p>错误信息:    Dsp_InvalidPathRange 说明：    无效的路径范围 相关函数：    Acm_GpMoveSelPath</p>
+<p>当前 path buffer 中剩余有 10 段 Path( 调用 Acm_GpGetPathStatus 函数查看<br>实例：    剩余的 path 数量）。若 StartIndex 或 EndIndex 的设置值大于 10，或 StartIndex 的值大于 EndIndex，则提示错误</p>
+<h2 id="C-4-EtherCAT-常见错误"><a href="#C-4-EtherCAT-常见错误" class="headerlink" title="C.4    EtherCAT 常见错误"></a>C.4    EtherCAT 常见错误</h2><p>错误代码：    0x8300002B</p>
+<p>错误信息:    EC_SlaveIDConflicted</p>
+<p>说明：    从轴 ID 冲突</p>
+<p>相关函数：    Acm_DevOpen, Acm_DevReOpen</p>
+<p>实例：    两个从轴的 ID 相同并连接至同一环中，因此将报错</p>
+<p>错误代码：    0x8300003D</p>
+<p>错误信息:    EC_AxCntExceeded</p>
+<p>说明：    所连接的轴的总数超出轴数上限 相关函数：    Acm_DevOpen, Acm_DevReOpen</p>
+<p>实例：    连接至 PCI-1203 的电机驱动数超出上限，因此将报错</p>
+<blockquote>
+<p>错误代码：    0x8300003E</p>
+<p>错误信息:    EC_FWUpgraded</p>
+<p>说明：    更新固件后，请关闭电脑并再次开启电脑以完成固件更新。 相关函数：    Acm_DevOpen, Acm_DevReOpen</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83010001</p>
+<p>错误信息:    ECAT_MasterEcatError</p>
+<p>说明：    EtherCAT 主站报警 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83010002</p>
+<p>错误信息:    ECAT_SlaveDisconnect_R0</p>
+<p>说明：    从站断开与 Ring 0 的连接 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83010003</p>
+<p>错误信息:    ECAT_SlaveDisconnect_R1</p>
+<p>说明：    从站断开与 Ring 1 的连接 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83030004</p>
+<p>错误信息:    ECAT_MOTION_SLAVE_NOT_SUPPORT</p>
+<p>说明：    Ring 0 中连接不支持的 EtherCAT 从站 </p>
+<p>相关函数：    Acm_DevOpen, Acm_DevReOpen</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83040004</p>
+<p>错误信息:    ECAT_IO_SLAVE_NOT_SUPPORT</p>
+<p>说明：    Ring 1 中连接不支持的 EtherCAT 从站。IO 环不支持连接电机驱动器。 </p>
+<p>相关函数：    Acm_DevOpen, Acm_DevReOpen</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83050001</p>
+<p>错误信息:    ECAT_RetryError</p>
+<p>说明：    重置错误或重置位置计数器时，从站未响应 （超时） 相关函数：    Acm_AxResetError, Acm_AxSetCmdPosition</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83050002</p>
+<p>错误信息:    ECAT_ResetCounterError</p>
+<p>说明：    重置位置计数器时，从站发生错误</p>
+<p>相关函数：    Acm_AxSetCmdPosition </p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83050003</p>
+<p>错误信息:    ECAT_CmdErrorProtection</p>
+<p>说明：    指令错误保护 相关函数：</p>
+<p>实例：    切换操作模式时 （例如从原点模式切换至 P2P 模式），若理论位置与实际 位置之间的距离差值大于指令错误保护值，则提示该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83050004</p>
+<p>错误信息:    ECAT_SlaveEcatALM</p>
+<p>说明：    EtherCAT 从站报警 相关函数：</p>
+<p>实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83050005</p>
+<p>错误信息:    ECAT_AxFollowError</p>
+<p>说明：    跟随错误保护 相关函数：</p>
+<p>实例：    若电机的理论位置与实际位置之间的距离差值大于驱动的设置值，则提示 该错误</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x83050006</p>
+<p>错误信息:    ECAT_AxHomeError</p>
+<p>说明：    执行原点运动时，从站发生错误</p>
+</blockquote>
+<blockquote>
+<p>相关函数：    Acm_AxMoveHome, Acm_AxHomeEx 实例：</p>
+</blockquote>
+<blockquote>
+<p>错误代码：    0x8310xxxx</p>
+<p>错误信息:    ECAT_DriveError</p>
+<p>说明：    驱动器错误 (0x8310xxxx)。请参考驱动器手册或驱动前置 LED 面板，了解 驱动器定义的错误码 xxxx。</p>
+<p>相关函数： </p>
+<p>实例：</p>
+</blockquote>
+<h2 id="C-5-不常见错误"><a href="#C-5-不常见错误" class="headerlink" title="C.5    不常见错误"></a>C.5    不常见错误</h2><p>错误代码：    错误信息:    说明： 0x80000001    DevRegDataLost</p>
+<p>0x80000002    LoadDllFailed 0x80000003    GetProcAddrFailed 0x80000007    OpenEventFailed 0x80000008    EventTimeOut 0x8000000C    ConnectWinIrqFailed 0x80000018    InvalidAxAlarmEn 0x80000019    InvalidAxAlarmLogic 0x8000001A    InvalidAxInPEn 0x8000001B    InvalidAxInPLogic 0x8000001C    InvalidAxHLmtEn 0x8000001D    InvalidAxHLmtLogic 0x8000001E    InvalidAxHLmtReact 0x8000001F    InvalidAxSLmtPEn 0x80000020    InvalidAxSLmtPReact 0x80000021    InvalidAxSLmtPValue 0x80000022    InvalidAxSLmtMEn 0x80000023    InvalidAxSLmtMReact 0x80000024    InvalidAxSLmtMValue 0x80000025    InvalidAxOrgLogic 0x80000026    InvalidAxOrgEnable 0x80000027    InvalidAxEzLogic 0x80000028    InvalidAxEzEnable 0x80000029    InvalidAxEzCount 0x8000002B    InvalidAxInEnable 0x8000002C    InvalidAxSvOnOff 0x8000002E    InvalidAxPosition 0x8000002F    InvalidAxHomeModeKw 0x80000034    GpInDevNotFound 0x80000035    InvalidGpCfgVel 0x80000036    InvalidGpCfgAcc 0x80000037    InvalidGpCfgDec 0x80000038    InvalidGpCfgJerk 0x80000040    DevIpoNotFinished 0x80000046    IoctlError</p>
+<p>0x80000047    AmnetRingWhile usingd 0x80000048    DeviceNotOpened 0x80000049    InvalidRing</p>
+<p>0x8000004A    InvalidSlaveIP 0x8000004B    InvalidParameter 0x8000004C    InvalidGpCenterPosition 0x8000004D    InvalidGpEndPosition 0x8000004E    InvalidAddress 0x8000004F    DeviceDisconnect</p>
+<p>0x80000050    DataOutBufExceeded 0x80000051    SlaveDeviceNotMatch 0x80000052    SlaveDeviceError 0x80000053    SlaveDeviceUnknow 0x80000056    InvalidVelocity 0x80000057    InvalidAxPulseInLogic 0x80000058    InvalidAxPulseInSource 0x80000059    InvalidAxErcLogic 0x8000005A    InvalidAxErcOnTime 0x8000005B    InvalidAxErcOffTime 0x8000005C    InvalidAxErcEnableMode 0x8000005D    InvalidAxSdEnable 0x8000005E    InvalidAxSdLogic 0x8000005F    InvalidAxSdReact 0x80000060    InvalidAxSdLatch 0x80000061    InvalidAxHomeResetEnable 0x80000062    InvalidAxBacklashEnable 0x80000063    InvalidAxBacklashPulses 0x80000064    InvalidAxVibrationEnable</p>
+<p>0x80000065    InvalidAxVibrationRevTime 0x80000066    InvalidAxVibrationFwdTime 0x80000067    InvalidAxAlarmReact 0x80000068    InvalidAxLatchLogic 0x80000069    InvalidFwMemoryMode 0x8000006A    InvalidConfigFile 0x8000006B    InvalidAxEnEvtArraySize 0x8000006C    InvalidAxEnEvtArray 0x8000006D    InvalidGpEnEvtArraySize 0x8000006E    InvalidGpEnEvtArray 0x8000006F    InvalidIntervalData 0x80000070    InvalidEndPosition 0x80000071    InvalidAxisSelect 0x80000072    InvalidTableSize 0x80000074    InvalidCmpSource 0x80000076    InvalidCmpPulseMode 0x80000077    InvalidCmpPulseLogic 0x80000078    InvalidCmpPulseWidth 0x80000079    InvalidPathFunctionID 0x8000007A    SysBufAllocateFailed 0x80000096    SlaveIOUpdateError 0x80000097    NoSlaveDevFound</p>
+<p>0x80000098    MasterDevNotOpen 0x80000099    MasterRingNotOpen 0x800000C8    InvalidDIPort 0x800000C9    InvalidDOPort 0x800000CA    InvalidDOValue 0x800000CC    CreateThreadFailed 0x800000CD    InvalidHomeModeEx</p>
+<p>0x800000CE    InvalidDirMode 0x800000CF    AxHomeMotionFailed 0x800000D1    PathBufIsFull 0x800000D2    PathBufIsEmpty 0x800000D3    GetAuthorityFailed 0x800000D4    GpIDAllocatedFailed 0x800000D5    FirmWareDown 0x800000D7    InvalidAxCmd 0x800000D8    InvalidaxExtDrv</p>
+<p>0x800000DA    SpeedCurveNotSupported 0x800000DB    InvalidCounterNo</p>
+<p>0x800000DD    PathSelStartCantRunInSpeed- ForwareMode</p>
+<p>0x80002000    HLmtPExceeded 0x80002001    HLmtNExceeded 0x80002002    SLmtPExceeded 0x80002003    SLmtNExceeded 0x80002004    AlarmHappened 0x80002005    EmgHappened 0x80002006    TimeLmtExceeded 0x80002007    DistLmtExceeded</p>
+<p>0x80002008    InvalidPositionOverride 0x80002009    OperationErrorHappened 0x8000200A    SimultaneousStopHappened 0x8000200B    OverflowInPAPB</p>
+<p>0x8000200C    OverflowInIPO 0x8000200D    STPHappened 0x8000200E    SDHappened 0x8000200F    AxsiNoCmpDataLeft</p>
+<p>错误代码：    错误信息:    说明： 0x83000000    EC_GetNICNumberFailed</p>
+<p>0x83000001    EC_GetNICInfoFailed 0x83000002    EC_OpenMasterDevFailed 0x83000003    EC_GetSlaveFailed 0x83000004    EC_StartOpModeFailed 0x83000005    EC_CloseDeviceFailed 0x83000006    EC_MemAllocateFailed 0x83000007    EC_InvalidNicIndex 0x83000008    EC_OpenDevFailed 0x83000009    EC_ReadFileFailed 0x8300000A    EC_GetNicInfoFailed 0x8300000B    EC_GetSDOFailed 0x8300000C    EC_InvalidParameter 0x8300000D    EC_GetPDOOffsetFailed</p>
+<p>0x8300000E    EC_InitialMappingInfoFalied 0x8300000F    EC_InitResourceFailed 0x83000010    EC_SetSDOFailed</p>
+<p>0x83000011    EC_InvalidPortType 0x83000012    EC_SetCycleTimeFailed 0x83000013    EC_InvalidAoRange 0x83000014    EC_InvalidAiRange 0x83000015    EC_GetSlaveInfoFaied 0x83000016    EC_GetNetWorkStateFaied 0x83000017    EC_RegisterEventFailed 0x83000018    EC_InvalidIntegrationTime 0x83000019    EC_InvalidAIEnable 0x8300001A    EC_InvalidDIFilter 0x8300001B    EC_SetSlaveStateFailed 0x8300001C    EC_ZeroCalibrationFailed 0x8300001D    EC_InvalidMasterHandle 0x8300001E    EC_InvalidENIFile 0x8300001F    EC_InvalidCaliType 0x83000020    EC_SetCaliValueFailed 0x83000021    EC_AOCalibrationFailed 0x83000022    EC_InvalidIOMapping</p>
+<p>0x83000023    EC_PortIndexGreaterThanPortN<br>um</p>
+<p>0x83000024    EC_ChannelIDGreaterThanChann<br>elNum</p>
+<p>0x83000025    EC_InputIndexGreaterThanInpu<br>tNum</p>
+<p>0x83000026    EC_OutputIndexGreaterThanOut<br>putNum</p>
+<p>0x83000027    EC_SetEnableFailed 0x83000028    EC_SetAIRangeFailed 0x83000029    EC_SetIntegrationTimeFailed 0x8300002A    EC_PropertyNotSupported 0x8300002B    EC_SlaveIDConflicted 0x8300002C    EC_SpanCalibrationFailed 0x8300002D    EC_InvalidAiValue</p>
+<p>0x8300002E    EC_InvalidAoValue 0x8300002F    EC_GetModuleFailed 0x83000030    EC_InvalidCntEnable 0x83000031    EC_InvalidCntPulseInMode 0x83000032    EC_InvalidCntInitValue 0x83000033    EC_InvalidCntMaxValue 0x83000034    EC_InvalidCntOverflowMode 0x83000035    EC_InvalidCntLatchEnable 0x83000036    EC_InvalidCntLatchEdge 0x83000037    EC_InvalidCntCmpEnable 0x83000038    EC_InvalidCntCmpMethod</p>
+<p>0x83000039    EC_InvalidCntCmpPulseEnable 0x8300003A    EC_InvalidCntCmpPulseMode 0x8300003B    EC_InvalidCntCmpPulseLogic 0x8300003C    EC_InvalidCntCmpPulseWidth</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Motion/" rel="tag"># Motion</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/15/L0001一路前行感谢有您/" rel="prev" title="L0001 一路前行，感谢有您">
+                L0001 一路前行，感谢有您 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDA2Mi8xNjU4OQ"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">zhifei.Liu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/Tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/zhifeiLiuHi" target="_blank" title="GitHub">
+                      GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:liuzhifei2011@163.com" target="_blank" title="E-Mail">
+                      E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:liuzhifei2011.337538@m.yinxiang.com" target="_blank" title="Evernote">
+                      Evernote</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.linkedin.com/in/zhifei-liu/" target="_blank" title="Linkedin">
+                      Linkedin</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#研华运动控制卡常见错误代码："><span class="nav-number">1.</span> <span class="nav-text">研华运动控制卡常见错误代码：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-1-错误代码："><span class="nav-number">1.1.</span> <span class="nav-text">C.1    错误代码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-2-常见错误"><span class="nav-number">1.2.</span> <span class="nav-text">C.2    常见错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-3-DSP-常见错误"><span class="nav-number">1.3.</span> <span class="nav-text">C.3    DSP 常见错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-4-EtherCAT-常见错误"><span class="nav-number">1.4.</span> <span class="nav-text">C.4    EtherCAT 常见错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-5-不常见错误"><span class="nav-number">1.5.</span> <span class="nav-text">C.5    不常见错误</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhifei.Liu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">64.1k</span>
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
